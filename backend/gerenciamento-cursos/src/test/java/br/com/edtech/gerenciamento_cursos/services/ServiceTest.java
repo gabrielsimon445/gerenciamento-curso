@@ -7,18 +7,18 @@ public class ServiceTest {
 
     @Test
     void testSomaValoresComSucesso() {
-        Assertions.assertNotNull(Service.somaValores(10.0, 10.0));
+        Assertions.assertNotNull(Service.somar(10, 10));
     }
 
     @Test
     void testSomaValoresComSucesso2() {
-        Double result = Service.somaValores(10.0, 10.0);
+        int result = Service.somar(10, 10);
         Assertions.assertEquals(20, result);
     }
 
     @Test
     void testSomaValoresComSucesso3() {
-        Double result = Service.somaValores(10.0, 10.0);
+        int result = Service.somar(10, 10);
         Assertions.assertEquals(20, result);
     }
 }
