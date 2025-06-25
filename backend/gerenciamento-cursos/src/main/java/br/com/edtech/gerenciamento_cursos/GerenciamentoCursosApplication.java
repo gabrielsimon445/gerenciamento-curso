@@ -1,8 +1,11 @@
 package br.com.edtech.gerenciamento_cursos;
 
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
 /**
  * Classe principal da aplicação Gerenciamento de Cursos.
  */
+@SpringBootApplication
 public class GerenciamentoCursosApplication {
     // Construtor privado para evitar instanciação
     private GerenciamentoCursosApplication() {
