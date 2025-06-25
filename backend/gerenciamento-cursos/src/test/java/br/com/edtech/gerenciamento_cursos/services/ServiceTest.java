@@ -15,4 +15,10 @@ public class ServiceTest {
         Double result = Service.somaValores(10.0, 10.0);
         Assertions.assertEquals(20, result);
     }
+
+    @Test
+    void testSomaValoresComSucesso3() {
+        Double result = Service.somaValores(10.0, 10.0);
+        Assertions.assertEquals(20, result);
+    }
 }
