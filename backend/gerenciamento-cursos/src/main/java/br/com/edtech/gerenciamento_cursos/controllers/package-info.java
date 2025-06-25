@@ -1,4 +1,5 @@
 package br.com.edtech.gerenciamento_cursos.controllers;
 
-public class Controller {
-}
+/**
+ * Pacote de controllers da aplicação.
+ */

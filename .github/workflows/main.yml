@@ -4,54 +4,71 @@ on:
   push:
     branches:
       - main
+      - teste-actions
   pull_request:
     branches:
       - main
+      - teste-actions
 
 jobs:
   lint-backend:
     runs-on: ubuntu-latest
-    working-directory: ./backend
     steps:
       - uses: actions/checkout@v4
       - name: Setup Java
         uses: actions/setup-java@v4
         with:
           java-version: '17'
+          distribution: 'temurin'
+      - name: Grant execute permission for mvnw
+        run: chmod +x mvnw
+        working-directory: ./backend/gerenciamento-cursos
       - name: Install dependencies
         run: ./mvnw install
+        working-directory: ./backend/gerenciamento-cursos
       - name: Run lint
         run: ./mvnw checkstyle:check
+        working-directory: ./backend/gerenciamento-cursos
 
   test-backend:
     runs-on: ubuntu-latest
     needs: lint-backend
-    working-directory: ./backend
     steps:
       - uses: actions/checkout@v4
       - name: Setup Java
         uses: actions/setup-java@v4
         with:
           java-version: '17'
+          distribution: 'temurin'
+      - name: Grant execute permission for mvnw
+        run: chmod +x mvnw
+        working-directory: ./backend/gerenciamento-cursos
       - name: Install dependencies
         run: ./mvnw install
+        working-directory: ./backend/gerenciamento-cursos
       - name: Run tests
         run: ./mvnw test
+        working-directory: ./backend/gerenciamento-cursos
 
   build-backend:
     runs-on: ubuntu-latest
     needs: test-backend
-    working-directory: ./backend
     steps:
       - uses: actions/checkout@v4
       - name: Setup Java
         uses: actions/setup-java@v4
         with:
           java-version: '17'
+          distribution: 'temurin'
+      - name: Grant execute permission for mvnw
+        run: chmod +x mvnw
+        working-directory: ./backend/gerenciamento-cursos
       - name: Install dependencies
         run: ./mvnw install
+        working-directory: ./backend/gerenciamento-cursos
       - name: Build project
         run: ./mvnw package
+        working-directory: ./backend/gerenciamento-cursos
 
   deploy-backend:
     runs-on: ubuntu-latest

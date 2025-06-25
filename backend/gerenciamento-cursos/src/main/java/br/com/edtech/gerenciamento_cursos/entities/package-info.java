@@ -1,4 +1,5 @@
 package br.com.edtech.gerenciamento_cursos.entities;
 
-public class Entity {
-}
+/**
+ * Pacote de entidades da aplicação.
+ */
