@@ -20,6 +20,9 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
+      - name: Grant execute permission for mvnw
+        run: chmod +x mvnw
+        working-directory: ./backend/gerenciamento-cursos
       - name: Install dependencies
         run: ./mvnw install
         working-directory: ./backend/gerenciamento-cursos
@@ -37,6 +40,9 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
+      - name: Grant execute permission for mvnw
+        run: chmod +x mvnw
+        working-directory: ./backend/gerenciamento-cursos
       - name: Install dependencies
         run: ./mvnw install
         working-directory: ./backend/gerenciamento-cursos
@@ -54,6 +60,9 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
+      - name: Grant execute permission for mvnw
+        run: chmod +x mvnw
+        working-directory: ./backend/gerenciamento-cursos
       - name: Install dependencies
         run: ./mvnw install
         working-directory: ./backend/gerenciamento-cursos
