@@ -22,10 +22,10 @@ jobs:
           distribution: 'temurin'
       - name: Install dependencies
         run: ./mvnw install
-        working-directory: ./backend
+        working-directory: ./backend/gerenciamento-cursos
       - name: Run lint
         run: ./mvnw checkstyle:check
-        working-directory: ./backend
+        working-directory: ./backend/gerenciamento-cursos
 
   test-backend:
     runs-on: ubuntu-latest
@@ -39,10 +39,10 @@ jobs:
           distribution: 'temurin'
       - name: Install dependencies
         run: ./mvnw install
-        working-directory: ./backend
+        working-directory: ./backend/gerenciamento-cursos
       - name: Run tests
         run: ./mvnw test
-        working-directory: ./backend
+        working-directory: ./backend/gerenciamento-cursos
 
   build-backend:
     runs-on: ubuntu-latest
@@ -56,10 +56,10 @@ jobs:
           distribution: 'temurin'
       - name: Install dependencies
         run: ./mvnw install
-        working-directory: ./backend
+        working-directory: ./backend/gerenciamento-cursos
       - name: Build project
         run: ./mvnw package
-        working-directory: ./backend
+        working-directory: ./backend/gerenciamento-cursos
 
   deploy-backend:
     runs-on: ubuntu-latest
