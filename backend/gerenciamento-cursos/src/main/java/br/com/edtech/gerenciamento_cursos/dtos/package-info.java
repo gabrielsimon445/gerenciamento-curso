@@ -1,4 +1,5 @@
 package br.com.edtech.gerenciamento_cursos.dtos;
 
-public class Response {
-}
+/**
+ * Pacote de DTOs da aplicação.
+ */
